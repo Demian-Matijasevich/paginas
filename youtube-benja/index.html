@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>YouTube de Benja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --crema:#fff0e0; --papel:#fffaf3; --tinta:#33281b; --soft:#6b5a45;
+  --marron:#7c6548; --rojo:#b8372a; --verde:#2e7d57; --ambar:#a86d16;
+  --linea:rgba(51,40,27,.14); --linea-soft:rgba(51,40,27,.07);
+  --sombra:0 12px 28px -20px rgba(93,64,32,.55);
+  --display:"Fraunces",Georgia,serif; --texto:"Montserrat",-apple-system,BlinkMacSystemFont,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --crema:#191411; --papel:#231c17; --tinta:#f0e4d4; --soft:#b3a08a; --marron:#c9a87c;
+  --rojo:#e8776a; --verde:#6bbf95; --ambar:#e0aa55;
+  --linea:rgba(240,228,212,.16); --linea-soft:rgba(240,228,212,.07); --sombra:0 12px 28px -20px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --crema:#191411; --papel:#231c17; --tinta:#f0e4d4; --soft:#b3a08a; --marron:#c9a87c;
+  --rojo:#e8776a; --verde:#6bbf95; --ambar:#e0aa55;
+  --linea:rgba(240,228,212,.16); --linea-soft:rgba(240,228,212,.07); --sombra:0 12px 28px -20px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{background:var(--crema);color:var(--tinta);font-family:var(--texto);font-size:15px;line-height:1.62;margin:0}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 100px}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0}
+a{color:var(--marron);text-underline-offset:2px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--marron);outline-offset:2px}
+header{padding:56px 0 0}
+.wordmark{font-family:var(--display);font-weight:700;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--marron);margin:0 0 18px}
+h1{font-size:clamp(2.1rem,6.5vw,3.4rem);font-weight:600;line-height:1.04;letter-spacing:-.03em}
+.bajada{font-size:1.06rem;color:var(--soft);margin:16px 0 0;max-width:62ch}
+.regla{height:2px;background:var(--tinta);margin:30px 0 0}
+section{margin-top:56px}
+.eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin:0 0 8px;font-weight:700}
+h2{font-size:1.7rem;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+h3{font-size:1.04rem;font-weight:600;margin:24px 0 8px}
+.sub{color:var(--soft);margin:8px 0 20px;max-width:64ch}
+p{margin:0 0 14px;max-width:70ch}
+.frase{background:var(--papel);border:1.5px solid var(--linea);border-left:5px solid var(--marron);border-radius:12px;padding:18px 20px;margin:24px 0;box-shadow:var(--sombra)}
+.frase p{margin:0;font-family:var(--display);font-size:1.18rem;line-height:1.4}
+.frase span{display:block;margin-top:8px;font-family:var(--texto);font-size:.84rem;color:var(--soft)}
+.tesis{display:grid;gap:10px;margin:22px 0}
+.t{background:var(--papel);border:1.5px solid var(--linea);border-radius:12px;padding:15px 18px}
+.t b{font-family:var(--display);font-size:1.05rem;display:block;margin-bottom:4px}
+.t p{margin:0;color:var(--soft);font-size:.92rem}
+.flujo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:20px 0;counter-reset:f}
+.f{background:var(--papel);border:1.5px solid var(--linea);border-radius:12px;padding:13px 14px;font-size:.86rem;counter-increment:f;position:relative}
+.f::before{content:counter(f);font-family:var(--display);font-weight:700;color:var(--marron);font-size:1.4rem;display:block;line-height:1;margin-bottom:6px}
+.f b{display:block;font-size:.92rem;margin-bottom:3px}
+.f span{color:var(--soft)}
+.tabla-cont{overflow-x:auto;border:1.5px solid var(--linea);border-radius:14px;background:var(--papel);margin:16px 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:520px}
+th{text-align:left;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);font-weight:700;padding:12px 14px;border-bottom:1.5px solid var(--linea);white-space:nowrap}
+td{padding:9px 14px;border-bottom:1px solid var(--linea-soft);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.n{font-weight:600}
+td.alto{color:var(--verde);font-weight:700} td.bajo{color:var(--rojo);font-weight:700}
+.formato{background:var(--papel);border:1.5px solid var(--linea);border-radius:16px;padding:20px 22px;margin:18px 0;box-shadow:var(--sombra)}
+.formato.lanz{border-left:5px solid var(--verde)}
+.formato .top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.formato h3{margin:0;font-size:1.3rem}
+.pill{font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--linea-soft);color:var(--soft)}
+.pill.v{background:color-mix(in srgb,var(--verde) 14%,transparent);color:var(--verde)}
+.formato .porque{color:var(--soft);font-size:.93rem;margin:6px 0 12px}
+.formato h4{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--marron);margin:16px 0 6px;font-family:var(--texto);font-weight:700}
+.formato ol,.formato ul{margin:0;padding-left:20px;font-size:.92rem}
+.formato li{margin-bottom:4px}
+.tl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.9rem}
+.tl .ts{font-variant-numeric:tabular-nums;font-weight:700;color:var(--marron);white-space:nowrap}
+.prompt{background:var(--crema);border:1px dashed var(--linea);border-radius:10px;padding:11px 13px;font-size:.84rem;color:var(--soft)}
+.prompt b{color:var(--tinta)}
+.ev{font-size:.82rem;color:var(--soft);border-top:1px solid var(--linea-soft);padding-top:10px;margin-top:14px}
+.reglas{list-style:none;padding:0;margin:16px 0;display:grid;gap:8px}
+.reglas li{background:var(--papel);border:1.5px solid var(--linea);border-radius:12px;padding:12px 16px;font-size:.92rem}
+.reglas li b{font-family:var(--display)}
+.reglas li span{display:block;font-size:.8rem;color:var(--soft);margin-top:3px}
+.alerta{border-radius:12px;padding:15px 18px;margin:16px 0;border:1.5px solid;font-size:.92rem;background:color-mix(in srgb,var(--ambar) 8%,var(--papel));border-color:color-mix(in srgb,var(--ambar) 35%,transparent)}
+.alerta b{display:block;margin-bottom:5px;font-family:var(--display);font-size:1rem}
+.alerta p{margin:0}
+.check{list-style:none;padding:0;margin:14px 0}
+.check li{padding:10px 0 10px 30px;border-bottom:1px solid var(--linea-soft);position:relative;font-size:.92rem}
+.check li::before{content:"";position:absolute;left:2px;top:13px;width:14px;height:14px;border:2px solid var(--marron);border-radius:4px}
+.check li:last-child{border-bottom:0}
+code{font-size:.85em;background:var(--linea-soft);padding:1px 5px;border-radius:4px;word-break:break-all}
+footer{margin-top:64px;padding-top:22px;border-top:1.5px solid var(--linea);color:var(--soft);font-size:.82rem}
+footer p{max-width:none}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<header>
+  <p class="wordmark">Benja Creativos · Estrategia de YouTube</p>
+  <h1>YouTube de Benja</h1>
+  <p class="bajada">El canal largo de la agencia: para quién es, qué se publica, en qué orden, cómo se graba sin frenar la operación y cómo se sabe si está funcionando. Se apoya en los pilares y las reglas que ya definimos para las redes, en 75 videos del rubro estudiados a fondo y en los números reales de la agencia.</p>
+  <div class="regla"></div>
+</header>
+
+<div class="frase">
+  <p>"Mandame el material y te devuelvo los anuncios listos para subir. Vos ocupate de vender."</p>
+  <span>La frase de la agencia no cambia. YouTube es el lugar donde esa frase se demuestra con trabajo real, durante 15 minutos, a alguien que ya pauta.</span>
+</div>
+
+<section style="margin-top:30px">
+  <p class="eyebrow">La idea</p>
+  <h2>Por qué YouTube, y para qué</h2>
+  <div class="tesis">
+    <div class="t"><b>Instagram da alcance; YouTube da el pedido.</b><p>En el canal de Lauty, a Instagram llega gente fría y a YouTube van los que ya lo eligieron: ahí los casos de alumnos rinden 2,9 veces el promedio. Los reels traen a alguien nuevo; el video largo es donde ese alguien ve un pedido real de punta a punta y manda el drive.</p></div>
+    <div class="t"><b>No se buscan views, se buscan dueños que ya pautan.</b><p>Lauty sostiene una mentoría de 1.000 a 2.800 dólares con 1.778 views de promedio por video. El nicho es chico y está bien así: un video de 2.000 views visto por 40 dueños de tienda que pautan todos los días vale más que uno de 200.000.</p></div>
+    <div class="t"><b>Lo que nadie en español puede mostrar.</b><p>En septiembre la agencia produjo 459 anuncios para 24 marcas, con 8 editores, y entrega en 31 horas de mediana desde que llega el pedido. Hay una marca que recibió 174 anuncios en un solo mes. Ningún canal del rubro en español tiene ese material para enseñar.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">El nicho, medido</p>
+  <h2>Dónde hay lugar: creativos, no campañas</h2>
+  <p class="sub">Videos largos en español del rubro, medidos el 6 de octubre. La columna clave es vistas por suscriptor: si pasa de 1, ese video rindió más que lo que el canal tiene para empujarlo.</p>
+  <div class="tabla-cont"><table>
+    <thead><tr><th>Video</th><th>Canal</th><th class="num">Vistas</th><th class="num">Subs</th><th class="num">Vistas / subs</th></tr></thead>
+    <tbody>
+      <tr><td>Cómo hacer creativos ganadores para anuncios de Facebook y TikTok</td><td>Brayan Hernández</td><td class="num">34.157</td><td class="num">7.000</td><td class="num alto">4,9×</td></tr>
+      <tr><td>Cómo hacer anuncios desde cero con inteligencia artificial</td><td>Laura Blago</td><td class="num">40.071</td><td class="num">26.400</td><td class="num alto">1,5×</td></tr>
+      <tr><td>Aprendé a hacer anuncios en 10 min en Meta Ads (tutorial)</td><td>Juan ADS</td><td class="num">379.213</td><td class="num">288.000</td><td class="num alto">1,3×</td></tr>
+      <tr><td>Cómo hacer creativos ganadores sin copiar a otras tiendas</td><td>Facundo Gerli</td><td class="num">20.568</td><td class="num">25.300</td><td class="num">0,8×</td></tr>
+      <tr><td>Cómo vender con Meta Andrómeda – estrategia 2026</td><td>Caro Dubi</td><td class="num">26.556</td><td class="num">39.200</td><td class="num">0,7×</td></tr>
+      <tr><td>Estructura perfecta para campañas tras Andrómeda</td><td>Julián Romero</td><td class="num">14.552</td><td class="num">31.000</td><td class="num bajo">0,5×</td></tr>
+      <tr><td>Alerta: Meta Andrómeda cambió Facebook Ads para siempre</td><td>Felipe Vergara</td><td class="num">120.679</td><td class="num">543.000</td><td class="num bajo">0,2×</td></tr>
+      <tr><td>Cómo clonar anuncios con IA que venden mucho en USA</td><td>David Costarrosa</td><td class="num">25.217</td><td class="num">160.000</td><td class="num bajo">0,2×</td></tr>
+      <tr><td>Truco para tener anuncios ganadores (diversificación creativa)</td><td>Felipe Vergara</td><td class="num">61.115</td><td class="num">543.000</td><td class="num bajo">0,1×</td></tr>
+    </tbody>
+  </table></div>
+  <p>La lectura: <b>lo que rinde por encima de su tamaño es "cómo se hace el creativo"</b>, sobre todo con IA. La estrategia de campañas (estructura, Andrómeda, presupuestos) ya la tienen canales de cientos de miles de suscriptores y rinde por debajo de su base. Es la misma conclusión a la que habíamos llegado leyendo los chats de la agencia: el cliente no pregunta por métricas, pregunta qué mandar, cuánto sale y cuándo llega. El canal juega en producción de creativos, nunca en gestión de campañas.</p>
+  <p>El hueco concreto: <b>nadie en español muestra una fábrica de anuncios por dentro, con pedidos reales.</b> Los que enseñan a hacer creativos lo hacen solos, con un ejemplo. Benja tiene 459 por mes.</p>
+</section>
+
+<section>
+  <p class="eyebrow">El sistema</p>
+  <h2>De un día de rodaje a un cliente nuevo</h2>
+  <p class="sub">Es el mismo sistema de las redes, con el video largo como fábrica. El largo no compite con los reels: los produce.</p>
+  <div class="flujo">
+    <div class="f"><b>Un rodaje por mes</b><span>Con el filmmaker que presta Lauty. Salen 2 largos y 10-15 ganchos sueltos.</span></div>
+    <div class="f"><b>Un largo de pantalla</b><span>Benja solo con OBS, una hora: la réplica o el informe del mes.</span></div>
+    <div class="f"><b>4-6 clips por largo</b><span>Cada bloque del largo vive solo como reel de 45 segundos.</span></div>
+    <div class="f"><b>Instagram primero</b><span>El mismo archivo después a TikTok y a Shorts. Un master, tres destinos.</span></div>
+    <div class="f"><b>WhatsApp con texto cargado</b><span>Cada video tiene su link: "Vengo del video de…". Así se sabe qué video trajo a quién.</span></div>
+    <div class="f"><b>Al CRM</b><span>El origen queda cargado en la orden. A los 90 días se sabe qué formato trae clientes.</span></div>
+  </div>
+  <p>Lo editan los propios editores de la agencia. El canal es, además, la mejor muestra del trabajo: si el video se ve como se ven los anuncios que entregan, no hace falta decir que editan bien.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Qué se publica</p>
+  <h2>El lanzamiento y seis formatos fijos</h2>
+  <p class="sub">Cada formato es una serie: se reconoce, se repite y se mejora. Los porcentajes son los de los pilares que ya teníamos; acá cada pilar tiene su versión larga.</p>
+
+  <!-- LANZAMIENTO -->
+  <div class="formato lanz">
+    <div class="top"><h3>0 · El video con Lauty</h3><span class="pill v">Lanzamiento</span><span class="pill">45-50 min</span></div>
+    <p class="porque">Los dos videos más vistos del canal de Lauty son colaboraciones: 22.000 y 17.000 views contra un promedio de 1.778. Es el video que presenta a Benja ante la audiencia exacta que necesita, con Lauty diciendo en cámara quién le hace los creativos. La estructura ya está armada en la guía de rodaje; acá se suma cómo se publica.</p>
+    <h4>Estructura (ya definida)</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>Arranque en frío: Benja le muestra un anuncio de una marca de Lauty y le pide un puntaje. Nadie dice "hola, hoy estamos con".</span>
+      <span class="ts">02:00</span><span>Lauty lo presenta como el que le hace los creativos.</span>
+      <span class="ts">04:00</span><span>"¿Cuánta plata perdiste por creativos malos?"</span>
+      <span class="ts">12:00</span><span>Desarmado en vivo de un anuncio que escaló, con métricas en pantalla.</span>
+      <span class="ts">24:00</span><span>El desacuerdo: réplica contra creativo de cero, o cuánto conviene delegar.</span>
+      <span class="ts">32:00</span><span>Producen un anuncio juntos, de cero a guion, con el tiempo corriendo.</span>
+      <span class="ts">44:00</span><span>"¿Qué harías si arrancaras hoy con 100 dólares?"</span>
+    </div>
+    <h4>Cómo se publica</h4>
+    <ul>
+      <li>Sale en el canal de Lauty y en el de Benja el mismo día (o como colaboración de YouTube, si la función está habilitada en las dos cuentas y Lauty acepta: aparece en los dos canales con una sola subida).</li>
+      <li>6 clips durante las dos semanas siguientes, cada uno con el link al largo.</li>
+      <li>Ese mismo día, con la luz armada, se graban los 10-15 ganchos del banco de preguntas.</li>
+    </ul>
+    <h4>Títulos posibles</h4>
+    <ol>
+      <li>"Le pregunté a Lauty cuánta plata perdió por creativos malos"</li>
+      <li>"Lauty me pasó su peor anuncio. Lo rehicimos en vivo"</li>
+      <li>"El que le hace los creativos a Lauty: cómo se hace un anuncio que escala"</li>
+    </ol>
+  </div>
+
+  <!-- F1 -->
+  <div class="formato">
+    <div class="top"><h3>1 · De esto a esto: un pedido real de punta a punta</h3><span class="pill">Pilar 1 · 30%</span><span class="pill">14-18 min</span></div>
+    <p class="porque">La versión larga del formato base de la agencia. Un pedido real (marca tapada) contado entero: lo que mandó el cliente, el brief, las decisiones del editor, la entrega y los números después. Es el "caso de alumno" de Lauty, que rinde 2,9×, pero con la ventaja de que Benja no tiene un caso: tiene cientos. Le muestra al dueño exactamente qué pasa cuando manda su drive.</p>
+    <h4>Títulos</h4>
+    <ol>
+      <li>"Un cliente me mandó esto. Le devolvimos 9 anuncios en 24 horas"</li>
+      <li>"Así llega el material de un cliente y así sale (pedido real, de punta a punta)"</li>
+      <li>"174 anuncios para una sola marca en un mes: así se produce"</li>
+      <li>"Sin cámara y sin el producto en la mano: 5 anuncios con lo que mandó el cliente"</li>
+      <li>"Cuánto tarda de verdad un anuncio: cronometramos un pedido entero"</li>
+    </ol>
+    <h4>Miniatura</h4>
+    <div class="prompt"><b>Composición:</b> pantalla partida en diagonal. A la izquierda, una carpeta de Drive desordenada con archivos crudos (capturas, un video vertical sin editar); a la derecha, el anuncio terminado en un celular. Benja en el centro, de medio cuerpo, mirando a cámara. Texto compuesto por código encima: <b>"ESTO → ESTO"</b> y abajo, chico, <b>"24 h"</b>.<br><b>Prompt base para Nano Banana 2</b> (sobre una foto real de Benja del rodaje): "Split composition, left side a messy Google Drive folder with raw video files on a laptop screen, right side a polished vertical video ad on a smartphone, man in the center at medium shot looking at camera, warm studio light, high contrast, clean background, no text." <b>Evitar:</b> stock genérico, fondos con muchos objetos, texto generado por la IA.</div>
+    <h4>Estructura</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>El drive crudo en pantalla y la pieza terminada al lado, sin explicar. "Esto me mandó un cliente el martes. Esto le entregamos el miércoles."</span>
+      <span class="ts">00:40</span><span>Qué vende la marca, qué pidió y cuánto pauta por día (sin nombrarla). Qué se va a ver en el video.</span>
+      <span class="ts">01:30</span><span>Bloque 1: el material. Qué servía, qué no, qué faltó y cómo se resolvió sin pedirle que grabe de nuevo.</span>
+      <span class="ts">04:30</span><span>Bloque 2: el brief. Cómo se arma el pedido para el editor, con el brief real en pantalla.</span>
+      <span class="ts">07:30</span><span>Bloque 3: el editor trabajando (timelapse) y las 3 decisiones que hacen que funcione.</span>
+      <span class="ts">11:00</span><span>Bloque 4: la entrega y lo que pasó después. Hook rate, CPA o ventas, lo que el cliente haya compartido.</span>
+      <span class="ts">14:00</span><span>Cierre: qué le harías en la próxima tanda. Link al próximo video.</span>
+    </div>
+    <h4>Clips para reels</h4>
+    <ul>
+      <li>El arranque: drive crudo contra pieza terminada en pantalla partida (los primeros 30 s, tal cual).</li>
+      <li>"Lo que siempre falta en el material que nos mandan" (del bloque 1).</li>
+      <li>Los números de antes y después (del bloque 4), con placa.</li>
+    </ul>
+    <h4>Qué busca la gente</h4>
+    <p style="font-size:.92rem">"cómo hacer anuncios que vendan", "creativos para meta ads", "editor de anuncios ecommerce".</p>
+    <h4>Cierre</h4>
+    <p style="font-size:.92rem">"Si querés que hagamos esto con tu material, el link de WhatsApp está en el primer comentario." El link lleva el texto "Vengo del video del pedido de punta a punta".</p>
+    <p class="ev">Respaldo: canal de Lauty (casos 2,9× y colaboraciones 3,0×); Víctor Heras, dueño de agencia que se vende con los resultados de sus clientes; Caleb Ralston ("credibilidad contextual" en cada pieza).</p>
+  </div>
+
+  <!-- F2 -->
+  <div class="formato">
+    <div class="top"><h3>2 · Réplica en vivo</h3><span class="pill">Pilar 2 · 25%</span><span class="pill">12-16 min</span></div>
+    <p class="porque">El servicio estrella de la agencia, mostrado en movimiento: un anuncio que lleva meses corriendo en Estados Unidos y su versión en castellano con el producto de una marca argentina. El contenido es infinito, porque la Biblioteca de anuncios no se agota. Cada video es la prueba de que el dueño no necesita inventar ni grabar nada.</p>
+    <h4>Títulos</h4>
+    <ol>
+      <li>"Este anuncio lleva 275 días vendiendo en EE.UU. Lo hicimos en castellano"</li>
+      <li>"Cloné un anuncio gringo ganador para una marca argentina (en vivo)"</li>
+      <li>"Qué se copia de la Biblioteca de anuncios y qué no se copia nunca"</li>
+      <li>"Anuncio gringo del mes #1: del inglés al castellano en 24 horas"</li>
+      <li>"Por qué copiar el anuncio ganador del gringo no te funciona (y cómo sí)"</li>
+    </ol>
+    <h4>Miniatura</h4>
+    <div class="prompt"><b>Composición:</b> dos celulares lado a lado con el mismo anuncio, uno con una bandera de EE.UU. chica en la esquina y otro con la de Argentina. Benja de perfil señalando el de la derecha. Texto encima: <b>"275 DÍAS"</b> en grande.<br><b>Prompt base:</b> "Two smartphones side by side showing the same style of vertical video ad, small US flag sticker on the left phone and Argentina flag sticker on the right phone, man in profile pointing at the right phone, studio light, high contrast, minimal background, no text." <b>Evitar:</b> logos de marcas reales en pantalla.</div>
+    <h4>Estructura</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>"Este anuncio lleva 275 días corriendo." La fecha de inicio en la Biblioteca, en pantalla. La antigüedad es la prueba de que vende.</span>
+      <span class="ts">00:45</span><span>Cómo se encuentra: búsqueda en vivo en la Biblioteca y los filtros que se usan.</span>
+      <span class="ts">03:00</span><span>Por qué funciona el original: el gancho, el ángulo y la estructura, en tres razones, no en diez.</span>
+      <span class="ts">06:00</span><span>Qué se adapta: voz, texto, escenas y producto. Qué no se copia nunca: las promesas y los números de la otra marca.</span>
+      <span class="ts">09:00</span><span>La versión argentina terminada, completa, y lado a lado con el original.</span>
+      <span class="ts">12:00</span><span>Cierre: cuántas variantes salen de esta misma réplica.</span>
+    </div>
+    <h4>Clips para reels</h4>
+    <ul>
+      <li>"Este anuncio lleva 275 días corriendo" + el antes y después (el reel de la serie semanal).</li>
+      <li>"Lo que jamás copiás de un anuncio gringo".</li>
+      <li>La búsqueda en la Biblioteca en 40 segundos.</li>
+    </ul>
+    <h4>Qué busca la gente</h4>
+    <p style="font-size:.92rem">"biblioteca de anuncios de facebook", "copiar anuncios ganadores", "clonar anuncios con IA".</p>
+    <h4>Cierre</h4>
+    <p style="font-size:.92rem">"¿Viste un anuncio gringo que te gustaría tener para tu marca? Mandámelo por WhatsApp."</p>
+    <p class="ev">Respaldo: "Cómo clonar anuncios con IA que venden mucho en USA" (David Costarrosa, 25.000 vistas en 2026); "Claude + Meta Ads Library" (Sam Piliero, 51.000); Facundo Gerli y Area 8: la réplica tal cual vale solo si nadie la corre en tu país, y lo demás lleva un giro.</p>
+  </div>
+
+  <!-- F3 -->
+  <div class="formato">
+    <div class="top"><h3>3 · Tu ganador se está quemando</h3><span class="pill">Pilar 3 · 20%</span><span class="pill">15-20 min</span></div>
+    <p class="porque">Le habla al que ya vende y tiene miedo de quemar el único anuncio que le funciona: es el pedido textual de los mejores clientes de la agencia ("quiero hacer más videos así pero con otros, para no quemar los que tengo"). Y lo explica con el cambio más grande de Meta en 2025-2026, Andrómeda: Meta agrupa los anuncios parecidos y deja competir a uno solo. Por eso cambiar la música o los subtítulos no da un anuncio nuevo. Este video es el que convierte "quiero un video" en "quiero una tanda".</p>
+    <h4>Títulos</h4>
+    <ol>
+      <li>"Tus 15 anuncios son uno solo para Meta (y por eso no gastan)"</li>
+      <li>"Tu anuncio ganador se está quemando: 10 versiones que Meta cuenta como distintas"</li>
+      <li>"Andrómeda: qué cuenta como anuncio nuevo y qué es plata tirada"</li>
+      <li>"Cambiarle la música a tu anuncio no es un anuncio nuevo"</li>
+      <li>"El ángulo no se quema, los anuncios sí: cómo renovar un ganador"</li>
+    </ol>
+    <h4>Miniatura</h4>
+    <div class="prompt"><b>Composición:</b> una cuadrícula de 9 anuncios casi iguales con 8 tachados en rojo y uno solo marcado en verde. Benja con cara de "te lo dije". Texto: <b>"ES EL MISMO"</b>.<br><b>Prompt base:</b> "Grid of nine nearly identical vertical video ad thumbnails on a dark background, eight crossed out with red marks, one highlighted with a green outline, man at the side with a skeptical expression, high contrast, clean, no text." <b>Evitar:</b> que los anuncios de la cuadrícula tengan marcas reales.</div>
+    <h4>Estructura</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>Un ganador real con su costo por venta subiendo, en pantalla. "Este anuncio vende hace tres meses. Se está quemando."</span>
+      <span class="ts">01:00</span><span>Qué cambió con Andrómeda, en una frase y con un ejemplo: la misma creadora con otra ropa es el mismo anuncio.</span>
+      <span class="ts">04:00</span><span>Las 4 cosas que sí hacen un anuncio distinto: el mensaje, la persona a la que le habla, el momento de la clienta (si ya conoce el problema o no) y el formato.</span>
+      <span class="ts">08:00</span><span>Las 10 versiones que salieron del ganador, una por una, cada una con qué cambió.</span>
+      <span class="ts">13:00</span><span>Cuántas versiones nuevas le hacen falta a una marca según lo que gasta por mes.</span>
+      <span class="ts">16:00</span><span>Cierre: el ángulo no se quema, los anuncios sí.</span>
+    </div>
+    <h4>Clips para reels</h4>
+    <ul>
+      <li>"Cambiarle la música no es un anuncio nuevo" (el ejemplo de la ropa).</li>
+      <li>Las 4 cosas que hacen un anuncio distinto, en 45 segundos.</li>
+      <li>El ganador quemándose y las 10 versiones en ráfaga.</li>
+    </ul>
+    <h4>Qué busca la gente</h4>
+    <p style="font-size:.92rem">"andromeda meta ads", "diversificación creativa", "anuncio ganador dejó de vender".</p>
+    <h4>Cierre</h4>
+    <p style="font-size:.92rem">"Mandame tu anuncio ganador y te digo qué 3 versiones le haría." Es la CTA de producción, no de diagnóstico: el que lo manda ya vende y necesita piezas nuevas.</p>
+    <p class="ev">Respaldo: 4 de los 9 lotes de la investigación (31 videos de Meta Ads) coinciden en esto. Felipe Vergara ("Alerta Andrómeda", 121.000 vistas; "Truco de diversificación", 61.000), Caro Dubi (Andrómeda, 27.000), Ben Heath, Area 8, Dara Denney.</p>
+  </div>
+
+  <!-- F4 -->
+  <div class="formato">
+    <div class="top"><h3>4 · UGC con IA, sin grabar un segundo</h3><span class="pill">Puerta de entrada</span><span class="pill">12-15 min</span></div>
+    <p class="porque">Es el único tema del rubro en español con tracción real y creciente, y es además el servicio que más deja: en septiembre el UGC con IA fue el 9% de los videos y el 40% de la ganancia de la agencia. El ángulo honesto (para qué sirve y para qué no) diferencia a Benja de los que lo venden como magia, y responde la objeción "¿para qué te pago si la IA me lo hace gratis?".</p>
+    <h4>Títulos</h4>
+    <ol>
+      <li>"Hice un anuncio entero sin grabar un segundo de video real"</li>
+      <li>"UGC con IA que vende contra UGC con IA que da vergüenza (lado a lado)"</li>
+      <li>"Un anuncio con IA en 20 minutos: para qué sirve y para qué no"</li>
+      <li>"Probé UGC con IA para una marca real: estos son los números"</li>
+      <li>"Por qué casi todos los anuncios con IA no venden (y no es la IA)"</li>
+    </ol>
+    <h4>Miniatura</h4>
+    <div class="prompt"><b>Composición:</b> un celular con una creadora "hablando a cámara" y, encima, una etiqueta tipo sello que dice que no existe. Benja sosteniendo el celular. Texto: <b>"NO EXISTE"</b>.<br><b>Prompt base:</b> "Man holding a smartphone toward the camera, the phone shows a realistic young woman speaking selfie-style in a bright kitchen, subtle digital glitch effect on the phone edge, studio light, high contrast, no text." <b>Evitar:</b> caras de personas reales conocidas.</div>
+    <h4>Estructura</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>El anuncio terminado primero, entero. Después la revelación: no se grabó nada.</span>
+      <span class="ts">01:00</span><span>El proceso en timelapse: actor base, producto sobre fondo blanco, voz, movimiento, montaje.</span>
+      <span class="ts">05:00</span><span>Las reglas que separan uno que vende de uno que da vergüenza: una sola voz en todo el anuncio, las fallas de labios tapadas con planos del producto, el producto real y bien visible.</span>
+      <span class="ts">09:00</span><span>Para qué sirve (volumen de variantes, marcas sin material) y para qué no (reemplazar la confianza de un cliente real).</span>
+      <span class="ts">12:00</span><span>Cierre: el mismo guion hecho con IA sin dirección y con dirección, lado a lado.</span>
+    </div>
+    <h4>Clips para reels</h4>
+    <ul>
+      <li>La revelación: "esta chica no existe".</li>
+      <li>"El error que delata a un anuncio hecho con IA" (la voz que cambia).</li>
+      <li>Con dirección contra sin dirección, lado a lado.</li>
+    </ul>
+    <h4>Qué busca la gente</h4>
+    <p style="font-size:.92rem">"ugc con ia", "anuncios con inteligencia artificial", "videos para vender productos con ia".</p>
+    <h4>Cierre</h4>
+    <p style="font-size:.92rem">"Si tu marca no tiene material para grabar, esto es lo que hacemos. WhatsApp en el primer comentario."</p>
+    <p class="ev">Respaldo: Laura Blago (1,5× sus suscriptores), Nespol (115.000 vistas), Speel en inglés (339.000); en TikTok en español, "UGC con IA" fue el único tema del nicho con tracción (70.000). Las reglas de producción salen del estándar de Jared Robinson y Speel.</p>
+  </div>
+
+  <!-- F5 -->
+  <div class="formato">
+    <div class="top"><h3>5 · Cómo se delega un anuncio</h3><span class="pill">Pilar 4 · 15%</span><span class="pill">10-12 min</span></div>
+    <p class="porque">El video menos glamoroso y el que más trabaja: responde por adelantado lo que todos los clientes preguntan antes de mandar el primer pedido (qué te paso, cuánto sale, cuándo llega). Además lo encuentra gente que lo busca en Google y en YouTube durante años, y el que lo ve manda el drive bien armado la primera vez: menos idas y vueltas, más margen por trabajo.</p>
+    <h4>Títulos</h4>
+    <ol>
+      <li>"Qué mandarle a un editor para que el anuncio vuelva bien"</li>
+      <li>"El brief de 3 líneas que usan nuestros 8 editores"</li>
+      <li>"Le pedí lo mismo a 3 editores con 3 briefs distintos"</li>
+      <li>"Los 5 errores del material que nos mandan los clientes"</li>
+      <li>"Cuánto tarda y cuánto sale un anuncio: la cuenta abierta"</li>
+    </ol>
+    <h4>Miniatura</h4>
+    <div class="prompt"><b>Composición:</b> un brief corto escrito a mano en un papel, al lado de un anuncio terminado en el celular. Texto: <b>"3 LÍNEAS"</b>.<br><b>Prompt base:</b> "Top-down view of a desk with a short handwritten note on paper next to a smartphone showing a finished vertical video ad, a hand pointing at the note, warm light, clean desk, no text." </div>
+    <h4>Estructura</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>Dos briefs reales, uno malo y uno bueno, y los dos anuncios que salieron de cada uno.</span>
+      <span class="ts">01:00</span><span>El drive modelo en pantalla: material, referencias, guion, fotos del producto, link de la tienda.</span>
+      <span class="ts">04:00</span><span>El brief de 3 líneas, armado en vivo.</span>
+      <span class="ts">06:30</span><span>Cuánto tarda cada tipo de anuncio y por qué (los tiempos reales de la agencia).</span>
+      <span class="ts">08:30</span><span>Qué pasa si no tenés guion ni material.</span>
+      <span class="ts">10:00</span><span>Cierre: la plantilla del brief, gratis por WhatsApp.</span>
+    </div>
+    <h4>Clips para reels</h4>
+    <ul>
+      <li>Brief malo contra brief bueno, lado a lado.</li>
+      <li>"Lo que siempre falta en el drive que nos mandan."</li>
+      <li>"Le pregunté a mis 8 editores qué error ven más" (si se graba en el rodaje).</li>
+    </ul>
+    <h4>Qué busca la gente</h4>
+    <p style="font-size:.92rem">"brief para editor de video", "qué mandarle a un editor", "cómo delegar la edición de anuncios".</p>
+    <h4>Cierre</h4>
+    <p style="font-size:.92rem">"Escribí BRIEF por WhatsApp y te mando la plantilla que usan nuestros editores." Es el imán de contactos del canal (ver abajo).</p>
+    <p class="ev">Respaldo: las preguntas que más se repiten en los chats de la agencia; Oren y Matt Gray (un recurso concreto que lleva la audiencia de la plataforma a un canal propio).</p>
+  </div>
+
+  <!-- F6 -->
+  <div class="formato">
+    <div class="top"><h3>6 · El informe del mes</h3><span class="pill">Pilar 5 · 10%</span><span class="pill">15-20 min · pantalla</span></div>
+    <p class="porque">Una vez por mes, Benja solo con la pantalla: qué pidieron 24 marcas en 459 anuncios, qué formatos y ángulos se repitieron, qué ganó y qué no. Es el formato que nadie más en español puede hacer, porque nadie más tiene ese volumen. Construye la asociación que se quiere instalar ("la agencia que más anuncios distintos produce") con hechos y no con palabras, y se graba en una hora sin filmmaker.</p>
+    <h4>Títulos</h4>
+    <ol>
+      <li>"Hicimos 459 anuncios en septiembre: esto es lo que aprendimos"</li>
+      <li>"Lo que pidieron 24 marcas argentinas en un mes (sin nombrar ninguna)"</li>
+      <li>"Los 3 ángulos que más se repitieron en octubre"</li>
+      <li>"Informe de creativos de octubre: qué ganó, qué murió y qué viene"</li>
+      <li>"500 anuncios por mes: los 5 errores que más plata le cuestan a una marca"</li>
+    </ol>
+    <h4>Miniatura</h4>
+    <div class="prompt"><b>Composición:</b> un mosaico denso de muchísimas miniaturas de anuncios verticales (borrosas, sin marcas) llenando el fondo, Benja adelante con un número grande. Texto: <b>"459"</b> y abajo <b>"SEPTIEMBRE"</b>.<br><b>Prompt base:</b> "Dense mosaic background of many blurred vertical video ad thumbnails, man in the foreground at medium shot, confident expression, dramatic contrast lighting, no text, no logos."</div>
+    <h4>Estructura</h4>
+    <div class="tl">
+      <span class="ts">00:00</span><span>El número del mes en pantalla y el dato más sorprendente, de entrada.</span>
+      <span class="ts">01:00</span><span>Qué se pidió: el reparto por tipo de anuncio (réplica, de cero, UGC con IA, iteraciones).</span>
+      <span class="ts">04:00</span><span>Los 3 aprendizajes del mes, cada uno con un anuncio real en pantalla (marca tapada).</span>
+      <span class="ts">10:00</span><span>Lo que ganó, según los clientes que compartieron resultados.</span>
+      <span class="ts">14:00</span><span>Lo que viene: fechas fuertes del mes siguiente (Día de la Madre, Black Friday) y qué conviene producir antes.</span>
+    </div>
+    <h4>Clips para reels</h4>
+    <ul>
+      <li>El número del mes + el dato sorprendente.</li>
+      <li>Cada uno de los 3 aprendizajes como reel suelto.</li>
+    </ul>
+    <h4>Qué busca la gente</h4>
+    <p style="font-size:.92rem">No es un video de búsqueda: es para los suscriptores y para mandar por WhatsApp a clientes y prospectos.</p>
+    <h4>Cierre</h4>
+    <p style="font-size:.92rem">"Si querés que tu marca esté en el informe del mes que viene, ya sabés dónde escribir."</p>
+    <p class="ev">Respaldo: Jared Robinson ("I Tested 1,000+ UGC Ads, Here's What Scales"); Kallaway (profundidad de contenido como diferencial); Caleb Ralston ("asociación repetida de forma consistente"). <b>Necesita</b> que cada anuncio quede etiquetado por tipo, ángulo y formato, y que los clientes avisen cuál ganó (el sistema de bonus por anuncio ganador que está pendiente).</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">El arranque</p>
+  <h2>Los primeros 90 días</h2>
+  <p class="sub">Un largo cada 15 días más el informe de fin de mes. Es lo que se sostiene sin frenar la operación; si a los 60 días llegan mensajes, se pasa a uno por semana.</p>
+  <div class="tabla-cont"><table>
+    <thead><tr><th>Cuándo</th><th>Qué se publica</th><th>De dónde sale</th></tr></thead>
+    <tbody>
+      <tr><td class="n">Semana 0</td><td>Canal armado: nombre, banner, 6 listas (una por formato), link de WhatsApp por video y la plantilla del brief</td><td>Se prepara, no se graba</td></tr>
+      <tr><td class="n">Semana 1</td><td><b>0 · El video con Lauty</b></td><td>Rodaje con filmmaker</td></tr>
+      <tr><td class="n">Semana 3</td><td><b>1 · De esto a esto</b> (un pedido real)</td><td>Rodaje con filmmaker</td></tr>
+      <tr><td class="n">Fin de mes 1</td><td><b>6 · Informe del mes</b> (versión de pedidos: qué y cuánto se produjo)</td><td>Benja solo, pantalla</td></tr>
+      <tr><td class="n">Semana 5</td><td><b>3 · Tu ganador se está quemando</b></td><td>Rodaje con filmmaker</td></tr>
+      <tr><td class="n">Semana 7</td><td><b>2 · Réplica en vivo #1</b></td><td>Benja solo, pantalla</td></tr>
+      <tr><td class="n">Fin de mes 2</td><td><b>6 · Informe del mes</b></td><td>Benja solo, pantalla</td></tr>
+      <tr><td class="n">Semana 9</td><td><b>4 · UGC con IA</b></td><td>Rodaje con filmmaker</td></tr>
+      <tr><td class="n">Semana 11</td><td><b>5 · Cómo se delega</b></td><td>Rodaje con filmmaker</td></tr>
+      <tr><td class="n">Fin de mes 3</td><td><b>6 · Informe del mes</b> + revisión de los 90 días</td><td>Benja solo, pantalla</td></tr>
+    </tbody>
+  </table></div>
+  <p>Cada largo deja 4-6 reels para las dos semanas siguientes, así que el calendario de redes que ya existe se alimenta solo. El orden importa: primero el video que trae audiencia prestada (Lauty), después el que muestra el servicio y recién después el que enseña.</p>
+</section>
+
+<section>
+  <p class="eyebrow">El oficio</p>
+  <h2>Ocho reglas para cada video largo</h2>
+  <ul class="reglas">
+    <li><b>Nada de "hola, bienvenidos".</b> El primer segundo es el anuncio, el número o la pantalla partida. Ninguno de los videos que más rinden empieza presentándose.<span>Canal de Lauty · guía de rodaje</span></li>
+    <li><b>En el primer minuto, cuatro cosas.</b> Para quién es, por qué creerle (con un dato del tema, no el currículum), qué se va a ver y un primer aprendizaje útil.<span>Caleb Ralston, intro "4C"</span></li>
+    <li><b>Si no muestra un anuncio real o un número real, no se publica.</b> La pantalla es el contenido; la cara acompaña.<span>Regla de la agencia</span></li>
+    <li><b>Una idea grande, tres partes.</b> Cada bloque cierra con algo aplicable y puede vivir solo como reel.<span>Iman Gadzhi · guía de rodaje</span></li>
+    <li><b>El mejor recurso de retención es que aprendan.</b> Nada de gráficos cada 10 segundos para tapar un video flojo: el ritmo lo da el material.<span>Caleb Ralston</span></li>
+    <li><b>Producción, nunca consultoría.</b> Cada video termina en "esto es lo que produciríamos", nunca en "esto es lo que tenés que cambiar en tu campaña". Si no, llegan pedidos de asesoría gratis.<span>Corrección de eje, 16-sep</span></li>
+    <li><b>Ni ecommerce en general ni producto.</b> Elegir producto, proveedores o tienda es terreno de Lauty, que es el socio.<span>Regla de la agencia</span></li>
+    <li><b>Marcas tapadas, números a la vista.</b> Y si el cliente aparece en cámara, con permiso escrito.<span>Regla de la agencia</span></li>
+  </ul>
+</section>
+
+<section>
+  <p class="eyebrow">La conversión</p>
+  <h2>Del video al WhatsApp</h2>
+  <ul class="reglas">
+    <li><b>Un link de WhatsApp por video</b>, en el primer comentario fijado y en la descripción, con el texto ya cargado: <code>wa.me/5493516214489?text=Vengo%20del%20video%20de%20la%20réplica</code>. Cuando el mensaje llega, el CRM ya sabe de qué video viene.</li>
+    <li><b>Un recurso gratis: la plantilla del brief.</b> "Escribí BRIEF y te la mando." Trae el contacto y, de paso, hace que el primer pedido llegue bien armado.</li>
+    <li><b>Una sola pregunta al final:</b> "¿Querés que lo hagamos con tu material?". Sin precios en la descripción: los rangos se explican en el video 5, con contexto.</li>
+    <li><b>La escalera es la que ya existe:</b> un primer pedido chico, después la tanda semanal (los packs de 15, 25 y 40 con descuento) y después el volumen mensual.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="eyebrow">La medición</p>
+  <h2>Cómo saber si funciona</h2>
+  <div class="tabla-cont"><table>
+    <thead><tr><th>Qué se mira</th><th>Dónde</th><th>Por qué</th></tr></thead>
+    <tbody>
+      <tr><td class="n">Mensajes con "Vengo del video…"</td><td>WhatsApp de la agencia</td><td>La métrica principal: dueños con tienda que escribieron por un video concreto.</td></tr>
+      <tr><td class="n">Clientes nuevos con origen YouTube</td><td>CRM, campo de origen de la orden</td><td>Es la que paga el canal. A los 90 días dice qué formato trae plata.</td></tr>
+      <tr><td class="n">Pedidos de "BRIEF"</td><td>WhatsApp</td><td>Contactos calificados que todavía no pidieron.</td></tr>
+      <tr><td class="n">Anuncios que mandan para las "3 versiones"</td><td>WhatsApp</td><td>El que manda su anuncio ya pauta y necesita piezas: es el mejor contacto posible.</td></tr>
+      <tr><td class="n">Retención y clic en la miniatura</td><td>YouTube Studio</td><td>Para mejorar el próximo video del mismo formato, no para juzgar el canal.</td></tr>
+      <tr><td class="n">Vistas</td><td>YouTube Studio</td><td>La última de la lista. La referencia es Lauty: 1.778 de promedio.</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>A los 90 días</b> se hace la cuenta: qué formato trajo mensajes y clientes, y se duplica ese, se corta el que no trajo nada y se prueba uno nuevo. Es el ciclo que repiten casi todos los que construyen marca en serio: probar amplio, quedarse con lo que funciona y volver a probar cuando se gasta.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Cuidados</p>
+  <h2>Lo que puede salir mal</h2>
+  <div class="alerta"><b>Que el canal dependa solo de la cara de Benja</b><p>Si la agencia va a crecer con Benja cada vez más metido en otros negocios, el canal no puede depender de que él grabe todo. Los editores tienen que aparecer como personajes (el formato "Le pregunté a mis 8 editores" va en esa línea), y el canal tiene que llevar el nombre de la agencia además del suyo.</p></div>
+  <div class="alerta"><b>Que lleguen pedidos de consejo y no de anuncios</b><p>Cualquier video que suene a "te arreglo la campaña" trae gente que pide asesoría gratis. Por eso cada cierre es de producción ("qué 3 versiones le haría") y nunca de diagnóstico.</p></div>
+  <div class="alerta"><b>Que falten números para mostrar</b><p>Los formatos 1 y 6 necesitan resultados de clientes. Antes de arrancar hacen falta 3 clientes que presten sus números a cambio de aparecer con la marca tapada, y el sistema para que avisen qué anuncio ganó.</p></div>
+  <div class="alerta"><b>Que se esperen views que el nicho no da</b><p>"Escalar campañas de Meta" topa en 15.000 vistas en TikTok en español. Un video de 2.000 vistas que trae dos clientes es un éxito. Juzgarlo por las vistas es la forma más rápida de abandonarlo.</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">Para arrancar</p>
+  <h2>Lo que tiene que estar listo antes del primer video</h2>
+  <ul class="check">
+    <li>Fecha del rodaje con Lauty y si acepta publicarlo como colaboración en los dos canales.</li>
+    <li>Nombre del canal y banner (la agencia + Benja), y las 6 listas creadas.</li>
+    <li>3 clientes que presten sus números para los casos, con la marca tapada.</li>
+    <li>El pedido real elegido para el video "De esto a esto", con el drive original guardado tal como llegó.</li>
+    <li>La plantilla del brief de 3 líneas, lista para mandar por WhatsApp.</li>
+    <li>El link de WhatsApp con texto cargado para cada video, y el origen YouTube agregado en el CRM.</li>
+    <li>El etiquetado de cada anuncio por tipo, ángulo y formato, para que el informe del mes salga de datos y no de memoria.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Armado el 6 de octubre de 2026. Fuentes: el research del canal de Lauty Cardozo (2.462 piezas medidas, 15-sep), la guía de rodaje y el banco de preguntas de Benja, la investigación de 75 videos de marca personal, ecommerce y Meta Ads (6-oct), una medición nueva de 15 videos largos del rubro en español y los números de producción de la agencia de septiembre (459 anuncios para 24 marcas; la mediana de 31 horas entre pedido y entrega es sobre todas las órdenes). Las miniaturas llevan el texto compuesto por código sobre la imagen; los prompts son el punto de partida para la foto real de Benja.</p>
+</footer>
+</div>
+
+</body>
+</html>
